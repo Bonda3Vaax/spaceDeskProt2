@@ -1,3 +1,5 @@
+
+
 const myDiv = document.getElementById('myDiv');
 
 myDiv.style.display = 'none';
@@ -37,12 +39,39 @@ async function fetchFortune() {
 
 // Wait for the DOM content to be loaded before attaching the event listener
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the button element by its ID
+    // Get the button elements by their IDs
     const searchButton = document.getElementById('searchButton');
+    const searchButton2 = document.getElementById('searchButton2');
+    const planetContent = document.getElementById('planetContent');
+    
+    
 
-    // Check if the button exists in the DOM
+    // Check if the searchButton exists in the DOM
     if (searchButton) {
         // Add a click event listener to the button
         searchButton.addEventListener('click', fetchFortune);
     }
+
+    // Check if the searchButton2 and planetContent exist in the DOM
+    if (searchButton2 && planetContent) {
+        // Ensure the planet content is initially hidden
+        planetContent.style.display = 'none';
+        
+
+
+        // Add a click event listener to the button
+        searchButton2.addEventListener('click', function() {
+            // Toggle the display property of the planet content
+            if (planetContent.style.display === 'none' || planetContent.style.display === '') {
+		
+                planetContent.style.display = 'flex';
+                
+                // movieCard.style.background = 'transparent';
+                
+            } else {
+                planetContent.style.display = 'none';
+            }
+        });
+    }
 });
+

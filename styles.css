@@ -34,7 +34,7 @@ body, html {
 
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.9);
-    border: 5px solid rgb(128, 128, 128);
+    border: 5px solid rgb(0, 0, 0);
     text-align: center;
     color: white;
     display: flex;
@@ -42,16 +42,18 @@ body, html {
     align-items: center;
 }
 
+
+
 .container {
     position: relative;
     z-index: 1;
 }
 
-.hotspot {
+/* General styles */
+.hotspot,
+.hotspot2,
+.hotspot3 {
     position: absolute;
-    top: 50vh;
-    left: 28.5%;
-    transform: translate(-50%, -50%);
     width: 2.5vw;
     height: 5vh;
     background-color: rgb(255, 255, 255);
@@ -64,83 +66,100 @@ body, html {
     justify-content: center;
     transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
     animation: pulsate 3s infinite;
+}
+
+.hotspot2,
+.hotspot3 {
+    font-family: 'Audiowide', sans-serif;
+}
+
+/* Position-specific styles */
+.hotspot {
+    top: 50vh;
+    left: 25%;
+    transform: translate(-50%, -50%);
 }
 
 .hotspot2 {
-    position: absolute;
     top: 5vh;
-    left: 28.5%;
+    left: 25%;
     transform: translate(-50%, -50%);
-    width: 2.5vw;
-    height: 5vh;
-    background-color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 0 35px rgb(255, 255, 0);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
-    animation: pulsate 3s infinite;
+}
+
+.hotspot3 {
+    top: 50vh;
+    left: 90%;
+    transform: translate(-50%, -50%);
+}
+
+/* Tooltip styles */
+.tooltip,
+.tooltip2,
+.tooltip3 {
+    font-family: 'Audiowide', sans-serif;
+    font-size: small;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #000000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 2s;
 }
 
 .tooltip {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #000000;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
     bottom: 125%;
     left: 50%;
     margin-left: -60px;
-    opacity: 0;
-    transition: opacity 2s;
 }
 
 .tooltip2 {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #000000;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
     top: 9vh;
     left: 50%;
     margin-left: -60px;
-    opacity: 0;
-    transition: opacity 2s;
 }
-.tooltip::after {
+
+.tooltip3 {
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+/* Tooltip arrow styles */
+.tooltip::after,
+.tooltip2::after,
+.tooltip3::after {
     content: "";
     position: absolute;
-    top: 100%;
-    left: 90%;
-    margin-left: -5px;
     border-width: 5px;
     border-style: solid;
+    left: 90%;
+    margin-left: -5px;
+}
+
+.tooltip::after {
+    top: 100%;
     border-color: rgb(255, 255, 0) transparent transparent transparent;
 }
 
 .tooltip2::after {
-    content: "";
-    position: absolute;
     bottom: 100%;
-    left: 90%;    
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: rgb(255, 255, 000) transparent transparent transparent;
+    border-color: rgb(255, 255, 0) transparent transparent transparent;
 }
 
-.hotspot:hover .tooltip {
+.tooltip3::after {
+    top: 100%;
+    border-color: rgb(255, 255, 0) transparent transparent transparent;
+}
+
+/* Hover effects */
+.hotspot:hover .tooltip,
+.hotspot2:hover .tooltip2,
+.hotspot3:hover .tooltip3 {
     visibility: visible;
     opacity: 1;
     background-color: rgb(255, 255, 0);
@@ -148,14 +167,15 @@ body, html {
     transform: translate(-50%, -50%) scale(1.2);
 }
 
-.hotspot2:hover .tooltip2 {
-    visibility: visible;
-    opacity: 1;
-    background-color: rgb(255, 255, 0);
-    box-shadow: 0 0 50px rgb(200, 0, 255);
-    transform: translate(-50%, -50%) scale(1.2);
+.hotspot:hover,
+.hotspot2:hover,
+.hotspot3:hover {
+    background-color: rgb(200, 0, 255);
+    
+    
 }
 
+/* Animation */
 @keyframes pulsate {
     0% {
         box-shadow: 0 0 10px rgb(255, 255, 0);
@@ -168,6 +188,7 @@ body, html {
     }
 }
 
+/* Paragraph styles */
 p {
     font-family: 'Audiowide', sans-serif;
     font-size: 1em;
@@ -177,9 +198,9 @@ p {
     letter-spacing: 1px;
 }
 
-span {
+/* span {
     font-family: 'Audiowide', sans-serif;
-}
+} */
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
