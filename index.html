@@ -51,11 +51,14 @@
         </div>
 
         <div class="container">
-            <button class="hotspot3" id="searchButton5">
+            <button class="hotspot3" onclick="openPage('contactPage.html')">
                 <i class="fas fa-hand-pointer"></i>
                 <span class="tooltip3">Contact Us!</span>
             </button>
         </div>
+        
+        
+        
    
 
     </div>
@@ -87,7 +90,7 @@
             <div class="d-flex align-items-center mb-3  py-1 small rounded-3"> <!-- Flex container with background light color, padding, and rounded corners -->
                 <div class="d-flex align-items-center flex-grow-1"> <!-- Flex container with items aligned and flex-grow to fill space -->
                      <!-- Classes for padding-end, bold font weight, and secondary text color -->
-                        <input id="searchBox" class="form-control" type="text" value="" /> <!-- Form control class for styling input -->
+                        <input id="searchBox" class="form-control" type="text" value="" autocomplete="off"/> <!-- Form control class for styling input -->
                         <button class="btn btn-dark ms-3" id="searchButton3">Search</button>
                     <!-- Button with danger (red) class and margin-start -->
                 </div>
@@ -103,7 +106,8 @@
         <!-- <script src="config.js"></script> -->
         <!-- <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
         <script src="./script.js"></script>
-        <script src="./script2.js"></script>
+        <script src="./scriptPlanets.js"></script>
+        <script src="./scriptContact.js"></script>
         
     
 </body>

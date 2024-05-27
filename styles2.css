@@ -1,3 +1,10 @@
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+
 .contentWrap {
     position: absolute;
 
@@ -21,14 +28,29 @@
 
 }
 
-.card-body, .form-control, .btn, h6 {
+.card-body, .form-control, .btn {
     font-family: 'Audiowide', sans-serif;
     font-size: smaller;
     color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 2px rgb(200, 0, 255);
     
 }
 
 .card-body {
     background-color: black;
-    
+    border: solid rgb(200, 0, 255);
+    box-shadow: 0 0 10px 2px white; 
+    padding: 25px;
+  
 }
+
+h6 {
+    font-family: 'Audiowide', sans-serif;
+    font-size: medium;
+}
+
+.form-control, .btn-dark  {
+    font-size: large;
+    padding: 10px;
+}   
+

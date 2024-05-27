@@ -34,7 +34,8 @@ body, html {
 
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.9);
-    border: 5px solid rgb(0, 0, 0);
+    border: 5px solid rgb(200, 0, 255);
+    box-shadow: 0 0 10px 2px white;
     text-align: center;
     color: white;
     display: flex;
@@ -44,10 +45,6 @@ body, html {
 
 
 
-.container {
-    position: relative;
-    z-index: 1;
-}
 
 /* General styles */
 .hotspot,
@@ -198,9 +195,13 @@ p {
     letter-spacing: 1px;
 }
 
-/* span {
-    font-family: 'Audiowide', sans-serif;
-} */
+.btn-dark:hover {
+    background-color: red;
+
+}
+
+
+
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

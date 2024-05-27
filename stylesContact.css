@@ -1,0 +1,62 @@
+/* Custom styles for the contact form */
+/* .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.form-label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+} */
+
+.container2 {
+    display: none;
+}
+
+
+
+.hotspot5 {
+    font-family: 'Audiowide', sans-serif;
+    position: absolute;
+    width: 2.5vw;
+    height: 5vh;
+    top: 50vh;
+    left: 79%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 35px rgb(255, 255, 0);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+    animation: pulsate 3s infinite;
+}
+
+.hotspot5:hover .tooltip3 {
+    visibility: visible;
+    opacity: 1;
+    background-color: rgb(255, 255, 0);
+    box-shadow: 0 0 50px rgb(200, 0, 255);
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.hotspot5:hover {
+    background-color: rgb(200, 0, 255);
+    
+    
+}
