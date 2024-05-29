@@ -1,62 +1,35 @@
-/* Custom styles for the contact form */
-/* .card {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-
-.form-label {
-    font-weight: bold;
-}
-
-.btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    font-family: 'Audiowide', sans-serif;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
-} */
-
 .container2 {
-    display: none;
+    display: none; /* Hide the container */
 }
-
-
 
 .hotspot5 {
-    font-family: 'Audiowide', sans-serif;
-    position: absolute;
-    width: 2.5vw;
-    height: 5vh;
-    top: 50vh;
-    left: 79%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 0 35px rgb(255, 255, 0);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
-    animation: pulsate 3s infinite;
+    font-family: 'Audiowide', sans-serif; /* Set the font to Audiowide */
+    position: absolute; /* Absolute positioning */
+    width: 2.5vw; /* Set the width to 2.5% of the viewport width */
+    height: 5vh; /* Set the height to 5% of the viewport height */
+    top: 50vh; /* Position from the top */
+    left: 79%; /* Position from the left */
+    transform: translate(-50%, -50%); /* Center the element horizontally and vertically */
+    background-color: rgb(255, 255, 255); /* White background color */
+    border: none; /* No border */
+    border-radius: 50%; /* Make the element circular */
+    box-shadow: 0 0 35px rgb(255, 255, 0); /* Yellow box shadow */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition for box-shadow and transform */
+    animation: pulsate 3s infinite; /* Pulsate animation */
 }
 
 .hotspot5:hover .tooltip3 {
-    visibility: visible;
-    opacity: 1;
-    background-color: rgb(255, 255, 0);
-    box-shadow: 0 0 50px rgb(200, 0, 255);
-    transform: translate(-50%, -50%) scale(1.2);
+    visibility: visible; /* Show tooltip */
+    opacity: 1; /* Make tooltip fully visible */
+    background-color: rgb(255, 255, 0); /* Yellow background for tooltip */
+    box-shadow: 0 0 50px rgb(200, 0, 255); /* Purple box shadow for tooltip */
+    transform: translate(-50%, -50%) scale(1.2); /* Enlarge and center tooltip */
 }
 
 .hotspot5:hover {
-    background-color: rgb(200, 0, 255);
-    
-    
+    background-color: rgb(200, 0, 255); /* Purple background on hover */
 }

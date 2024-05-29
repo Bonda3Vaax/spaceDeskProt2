@@ -1,114 +1,150 @@
-
 <!DOCTYPE html>
 <html lang="en">
+<!-- Start of the HTML document with English language setting -->
 
 <head>
-
+    <!-- Head section starts -->
     <meta charset="UTF-8">
+    <!-- Specifies the character encoding for the document -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sets the viewport to make the website responsive -->
+
+    <title>Space Cadets Academy</title>
+    <!-- Title of the document -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Favicon -->
 
     <script src="https://kit.fontawesome.com/782faedf60.js" crossorigin="anonymous"></script>
+    <!-- Loads FontAwesome icons library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Links to FontAwesome CSS for icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Preconnect to Google Fonts for performance -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preconnect to Google Fonts with crossorigin for performance -->
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Link to Google Fonts stylesheet for 'Audiowide' font -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Links to Bootstrap CSS for styling -->
 
     <link rel="stylesheet" href="./styles.css">
+    <!-- Link to custom stylesheet -->
     <link rel="stylesheet" href="./styles2.css">
-    <title>Space Cadets Academy</title>
-
+    <!-- Link to another custom stylesheet -->
 </head>
-<body>
+<!-- Head section ends -->
 
-      
-    <div  class="container-fluid">
-    
-        
+<body>
+    <!-- Body section starts -->
+    <div class="container-fluid">
+        <!-- Full-width container -->
+
         <video id="background-video" autoplay loop muted>
+            <!-- Video element with autoplay, loop, and muted attributes -->
             <source src="Desk1.mp4" type="video/mp4">
-            <!-- Fallback text for browsers that do not support the video element -->
+            <!-- Video source in MP4 format -->
             Your browser does not support the video tag.
+            <!-- Fallback text for browsers that do not support the video element -->
         </video>
 
         <div class="centered-div" id="myDiv">
+            <!-- Centered div with id 'myDiv' -->
             <p id="fortuneContent">Your content here</p>
+            <!-- Paragraph with id 'fortuneContent' -->
         </div>
 
         <div class="container">
-            <button class="hotspot" id="searchButton">
+            <!-- Container for the first button -->
+            <button class="hotspot" id="searchButton" aria-label="Fortune News">
+                <!-- Button with class 'hotspot' and id 'searchButton' -->
                 <i class="fa-regular fa-newspaper"></i>
+                <!-- FontAwesome icon for newspaper -->
                 <span class="tooltip">Fortune News!</span>
+                <!-- Tooltip span -->
             </button>
         </div>
-        
-        
+
         <div class="container">
-            <button class="hotspot2" id="searchButton2">
+            <!-- Container for the second button -->
+            <button class="hotspot2" id="searchButton2" aria-label="Planet Search">
+                <!-- Button with class 'hotspot2' and id 'searchButton2' -->
                 <i class="fa-solid fa-globe"></i>
+                <!-- FontAwesome icon for globe -->
                 <span class="tooltip2">Planet Search</span>
+                <!-- Tooltip span -->
             </button>
         </div>
 
         <div class="container">
-            <button class="hotspot3" onclick="openPage('contactPage.html')">
+            <!-- Container for the third button -->
+            <button class="hotspot3" onclick="openPage('contactPage.html')" aria-label="Contact Us">
+                <!-- Button with class 'hotspot3' and onClick event -->
                 <i class="fa-regular fa-envelope"></i>
+                <!-- FontAwesome icon for envelope -->
                 <span class="tooltip3">Contact Us!</span>
+                <!-- Tooltip span -->
             </button>
         </div>
-        
-        
-        
-   
-
     </div>
 
+    <div class="contentWrap" id="planetContent">
+        <!-- Wrapper div with id 'planetContent' -->
 
-    <div class="contentWrap" id="planetContent">    
-
-        
-    
-       
-    
-        <div class="containerP p-3"> <!-- Container with padding -->
-            <div class="card" style="width: 25rem;" id="movieCard"> <!-- Card with fixed width -->
-                <!-- <img src="./placeholder.jpg" class="card-img-top" id="movieImage" alt="holder" > Card image top class -->
-                <div class="card-body"> <!-- Card body -->
-                    <h5 class="card-title" id="movieTitle"></h5> 
+        <div class="containerP p-3">
+            <!-- Padded container for card -->
+            <div class="card" style="width: 25rem;" id="movieCard">
+                <!-- Card with fixed width and id 'movieCard' -->
+                <div class="card-body">
+                    <!-- Card body -->
+                    <h5 class="card-title" id="movieTitle"></h5>
+                    <!-- Card title with id 'movieTitle' -->
                     <h6 class="card-text" id="movieText"></h6>
+                    <!-- Card text with id 'movieText' -->
                     <h6 class="card-text" id="movieMass"></h6>
+                    <!-- Card text with id 'movieMass' -->
                     <h6 class="card-text" id="movieRadius"></h6>
+                    <!-- Card text with id 'movieRadius' -->
                     <h6 class="card-text" id="movieTemperature"></h6>
+                    <!-- Card text with id 'movieTemperature' -->
                     <h6 class="card-text" id="movieDistance"></h6>
-                    <h6 class="card-text" id="movieMajorAxis"></h6> 
-                    <!-- <a href="#" class="btn btn-danger">Link if needed</a> Button with danger (red) class -->
+                    <!-- Card text with id 'movieDistance' -->
+                    <h6 class="card-text" id="movieMajorAxis"></h6>
+                    <!-- Card text with id 'movieMajorAxis' -->
                 </div>
-            </div>        
+            </div>
         </div>
 
-        <div class="containerP"> <!-- Container -->
-            <div class="d-flex align-items-center mb-3  py-1 small rounded-3"> <!-- Flex container with background light color, padding, and rounded corners -->
-                <div class="d-flex align-items-center flex-grow-1"> <!-- Flex container with items aligned and flex-grow to fill space -->
-                     <!-- Classes for padding-end, bold font weight, and secondary text color -->
-                        <input id="searchBox" class="form-control" type="text" value="" autocomplete="off"/> <!-- Form control class for styling input -->
-                        <button class="btn btn-dark ms-3" id="searchButton3">Search</button>
-                    <!-- Button with danger (red) class and margin-start -->
+        <div class="containerP">
+            <!-- Padded container -->
+            <div class="d-flex align-items-center mb-3 py-1 small rounded-3">
+                <!-- Flex container with alignment, margin, padding, and rounded corners -->
+                <div class="d-flex align-items-center flex-grow-1">
+                    <!-- Flex container with alignment and flex-grow -->
+                    <input id="searchBox" class="form-control" type="text" value="" autocomplete="off" aria-label="Search Box">
+                    <!-- Search box input with id 'searchBox' and autocomplete off -->
+                    <button class="btn btn-dark ms-3" id="searchButton3">Search</button>
+                    <!-- Search button with class 'btn btn-dark' and margin start -->
                 </div>
-                 
             </div>
-           
-            <p id="errorMessage" class="alert alert-warning">Error</p>
+            <p id="errorMessage" class="alert alert-warning" role="alert">Error</p>
+            <!-- Paragraph for error message with alert class and role alert -->
         </div>
-        
     </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <!-- <script src="config.js"></script> -->
-        <!-- <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
-        <script src="./script.js"></script>
-        <script src="./scriptPlanets.js"></script>
-        <script src="./scriptContact.js"></script>
-        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Script for Bootstrap JS bundle -->
+    <script src="./script.js"></script>
+    <!-- Link to custom JavaScript file -->
+    <script src="./scriptPlanets.js"></script>
+    <!-- Link to another custom JavaScript file -->
+    <!-- <script src="dist/bundle.js"></script> -->
     
 </body>
+<!-- Body section ends -->
+
 </html>
+<!-- End of HTML document -->

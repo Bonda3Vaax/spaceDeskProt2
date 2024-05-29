@@ -1,56 +1,57 @@
+/* Importing the Audiowide font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
-.container {
-    position: relative;
-    z-index: 1;
+body, html {
+    margin: 0; /* Removing default margin */
+    padding: 0; /* Removing default padding */
+    width: 100%; /* Setting width to 100% of the viewport */
+    height: 100%; /* Setting height to 100% of the viewport */
+    overflow: hidden; /* Hiding any overflow */
+    font-family: Arial, sans-serif; /* Setting default font to Arial */
+    box-sizing: border-box; /* Ensuring padding and border are included in element's total width and height */
 }
 
+.container {
+    position: relative; /* Relative positioning */
+    z-index: 1; /* Set stacking order */
+}
 
 .contentWrap {
-    position: absolute;
-
-    width: 40vw;
-    height:40vh;      
-    top: 75vh;
-    left: 50%;
-
-    /* transform: translateX(-50%); */
-   /* background-color: rgba(0, 0, 0, 0.3); */
-    /* border: 5px solid rgb(128, 128, 128); */
-    text-align: center;
-    color: rgb(255, 255, 255);
-    display: flex;
-	flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: absolute; /* Absolute positioning */
+    width: 40vw; /* Viewport width percentage */
+    height: 40vh; /* Viewport height percentage */
+    top: 75vh; /* Position from the top */
+    left: 50%; /* Position from the left */
+    text-align: center; /* Center text */
+    color: rgb(255, 255, 255); /* White text color */
+    display: flex; /* Flexbox display */
+    flex-direction: column; /* Column direction for flex items */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
     transform: translate(-50%, -50%); /* Center the container horizontally */
     box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-    
-
 }
 
 .card-body, .form-control, .btn {
-    font-family: 'Audiowide', sans-serif;
-    font-size: smaller;
-    color: rgb(255, 255, 255);
-    box-shadow: 0 0 10px 2px rgb(200, 0, 255);
-    
+    font-family: 'Audiowide', sans-serif; /* Audiowide font */
+    font-size: smaller; /* Smaller font size */
+    color: rgb(255, 255, 255); /* White text color */
+    box-shadow: 0 0 10px 2px rgb(200, 0, 255); /* Box shadow */
 }
 
 .card-body {
-    background-color: black;
-    border: solid rgb(200, 0, 255);
-    box-shadow: 0 0 10px 2px white; 
-    padding: 25px;
-  
+    background-color: black; /* Black background */
+    border: solid rgb(200, 0, 255); /* Solid border */
+    box-shadow: 0 0 10px 2px white; /* Box shadow */
+    padding: 25px; /* Padding */
 }
 
 h6 {
-    font-family: 'Audiowide', sans-serif;
-    font-size: medium;
+    font-family: 'Audiowide', sans-serif; /* Audiowide font */
+    font-size: medium; /* Medium font size */
 }
 
-.form-control, .btn-dark  {
-    font-size: large;
-    padding: 10px;
-}   
-
+.form-control, .btn-dark {
+    font-size: large; /* Large font size */
+    padding: 10px; /* Padding */
+}

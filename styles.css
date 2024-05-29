@@ -1,278 +1,241 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap'); /* Importing the Audiowide font from Google Fonts */
 
 body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
+    margin: 0; /* Removing default margin */
+    padding: 0; /* Removing default padding */
+    width: 100%; /* Setting width to 100% of the viewport */
+    height: 100%; /* Setting height to 100% of the viewport */
+    overflow: hidden; /* Hiding any overflow */
+    font-family: Arial, sans-serif; /* Setting default font to Arial */
+    box-sizing: border-box; /* Ensuring padding and border are included in element's total width and height */
 }
 
 #background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: -1;
+    position: absolute; /* Absolute positioning */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the entire area */
+    object-position: center; /* Center the video */
+    z-index: -1; /* Place behind other elements */
 }
 
 .container-fluid {
-    display: relative;
+    display: relative; /* Display as relative */
 }
 
 .centered-div {
-    position: absolute;
-
-    width: 538px;
-    height: 35.56vh;      
-    top: 5.2%;
-    left: 48.7%;
-
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    border: 5px solid rgb(200, 0, 255);
-    box-shadow: 0 0 10px 2px white;
-    text-align: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute; /* Absolute positioning */
+    width: 538px; /* Fixed width */
+    height: 35.56vh; /* Viewport height percentage */
+    top: 5.2%; /* Position from the top */
+    left: 48.7%; /* Position from the left */
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+    border: 5px solid rgb(200, 0, 255); /* Solid border */
+    box-shadow: 0 0 10px 2px white; /* Box shadow */
+    text-align: center; /* Center text */
+    color: white; /* White text color */
+    display: flex; /* Flexbox display */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
-
-
-
 
 /* General styles */
-.hotspot,
-.hotspot2,
-.hotspot3 {
-    position: absolute;
-    width: 2.5vw;
-    height: 5vh;
-    background-color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 0 35px rgb(255, 255, 0);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
-    animation: pulsate 3s infinite;
-}
-
-.hotspot2,
-.hotspot3 {
-    font-family: 'Audiowide', sans-serif;
+.hotspot, .hotspot2, .hotspot3 {
+    font-family: 'Audiowide', sans-serif; /* Audiowide font */
+    position: absolute; /* Absolute positioning */
+    width: 2.5vw; /* Viewport width percentage */
+    height: 5vh; /* Viewport height percentage */
+    background-color: rgb(255, 255, 255); /* White background */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular shape */
+    box-shadow: 0 0 35px rgb(255, 255, 0); /* Box shadow */
+    cursor: pointer; /* Pointer cursor */
+    display: flex; /* Flexbox display */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transitions */
+    animation: pulsate 3s infinite; /* Pulsate animation */
 }
 
 /* Position-specific styles */
 .hotspot {
-    top: 50vh;
-    left: 25%;
-    transform: translate(-50%, -50%);
+    top: 50vh; /* Position from the top */
+    left: 25%; /* Position from the left */
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
 }
 
 .hotspot2 {
-    top: 5vh;
-    left: 25%;
-    transform: translate(-50%, -50%);
+    top: 5vh; /* Position from the top */
+    left: 25%; /* Position from the left */
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
 }
 
 .hotspot3 {
-    top: 50vh;
-    left: 90%;
-    transform: translate(-50%, -50%);
+    top: 50vh; /* Position from the top */
+    left: 90%; /* Position from the left */
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
 }
 
 /* Tooltip styles */
-.tooltip,
-.tooltip2,
-.tooltip3 {
-    font-family: 'Audiowide', sans-serif;
-    font-size: small;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #000000;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 2s;
+.tooltip, .tooltip2, .tooltip3 {
+    font-family: 'Audiowide', sans-serif; /* Audiowide font */
+    font-size: small; /* Small font size */
+    visibility: hidden; /* Initially hidden */
+    width: 120px; /* Fixed width */
+    background-color: black; /* Black background */
+    color: #000000; /* Black text color */
+    text-align: center; /* Center text */
+    border-radius: 6px; /* Rounded corners */
+    padding: 5px; /* Padding */
+    position: absolute; /* Absolute positioning */
+    z-index: 1; /* Above other elements */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 2s; /* Smooth transition */
 }
 
 .tooltip {
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
+    bottom: 125%; /* Position above the hotspot */
+    left: 50%; /* Center horizontally */
+    margin-left: -60px; /* Offset to center */
 }
 
 .tooltip2 {
-    top: 9vh;
-    left: 50%;
-    margin-left: -60px;
+    top: 9vh; /* Position below the hotspot */
+    left: 50%; /* Center horizontally */
+    margin-left: -60px; /* Offset to center */
 }
 
 .tooltip3 {
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
+    bottom: 125%; /* Position above the hotspot */
+    left: 50%; /* Center horizontally */
+    margin-left: -60px; /* Offset to center */
 }
 
 /* Tooltip arrow styles */
-.tooltip::after,
-.tooltip2::after,
-.tooltip3::after {
-    content: "";
-    position: absolute;
-    border-width: 5px;
-    border-style: solid;
-    left: 90%;
-    margin-left: -5px;
+.tooltip::after, .tooltip2::after, .tooltip3::after {
+    content: ""; /* Empty content */
+    position: absolute; /* Absolute positioning */
+    border-width: 5px; /* Border width */
+    border-style: solid; /* Solid border */
+    left: 90%; /* Position from the left */
+    margin-left: -5px; /* Offset to center */
 }
 
-.tooltip::after {
-    top: 100%;
-    border-color: rgb(255, 255, 0) transparent transparent transparent;
+.tooltip::after, .tooltip3::after {
+    top: 100%; /* Position below the tooltip */
+    border-color: rgb(255, 255, 0) transparent transparent transparent; /* Arrow color */
 }
 
 .tooltip2::after {
-    bottom: 100%;
-    border-color: rgb(255, 255, 0) transparent transparent transparent;
-}
-
-.tooltip3::after {
-    top: 100%;
-    border-color: rgb(255, 255, 0) transparent transparent transparent;
+    bottom: 100%; /* Position above the tooltip */
+    border-color: rgb(255, 255, 0) transparent transparent transparent; /* Arrow color */
 }
 
 /* Hover effects */
-.hotspot:hover .tooltip,
-.hotspot2:hover .tooltip2,
-.hotspot3:hover .tooltip3 {
-    visibility: visible;
-    opacity: 1;
-    background-color: rgb(255, 255, 0);
-    box-shadow: 0 0 50px rgb(200, 0, 255);
-    transform: translate(-50%, -50%) scale(1.2);
+.hotspot:hover .tooltip, .hotspot2:hover .tooltip2, .hotspot3:hover .tooltip3 {
+    visibility: visible; /* Make visible */
+    opacity: 1; /* Fully visible */
+    background-color: rgb(255, 255, 0); /* Yellow background */
+    box-shadow: 0 0 50px rgb(200, 0, 255); /* Box shadow */
+    transform: translate(-50%, -50%) scale(1.2); /* Enlarge */
 }
 
-.hotspot:hover,
-.hotspot2:hover,
-.hotspot3:hover {
-    background-color: rgb(200, 0, 255);
-    
-    
+.hotspot:hover, .hotspot2:hover, .hotspot3:hover {
+    background-color: rgb(200, 0, 255); /* Purple background */
 }
 
 /* Animation */
 @keyframes pulsate {
     0% {
-        box-shadow: 0 0 10px rgb(255, 255, 0);
+        box-shadow: 0 0 10px rgb(255, 255, 0); /* Initial shadow */
     }
     50% {
-        box-shadow: 0 0 50px rgb(200, 0, 255);
+        box-shadow: 0 0 50px rgb(200, 0, 255); /* Mid-animation shadow */
     }
     100% {
-        box-shadow: 0 0 10px rgb(200, 0, 255);
+        box-shadow: 0 0 10px rgb(200, 0, 255); /* End shadow */
     }
 }
 
 /* Paragraph styles */
 p {
-    font-family: 'Audiowide', sans-serif;
-    font-size: 1em;
-    padding: 60px;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    letter-spacing: 1px;
+    font-family: 'Audiowide', sans-serif; /* Audiowide font */
+    font-size: 1em; /* Font size */
+    padding: 60px; /* Padding */
+    color: #fff; /* White text color */
+    text-shadow: 1px 1px 1px #000; /* Text shadow */
+    letter-spacing: 1px; /* Letter spacing */
 }
 
 .btn-dark:hover {
-    background-color: red;
-
+    background-color: red; /* Red background on hover */
 }
-
-
-
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .centered-div {
-        width: 55%;
-        height: 26%;
-        top: 11%;
-        left: 18%;
-        transform: translateX(0);
-        padding: 10px;
+        width: 55%; /* Adjusted width */
+        height: 26%; /* Adjusted height */
+        top: 11%; /* Adjusted top position */
+        left: 18%; /* Adjusted left position */
+        transform: translateX(0); /* No horizontal centering */
+        padding: 10px; /* Padding */
     }
-
-   
 }
 
 /* Medium devices (portrait tablets and large phones, 601px to 768px) */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     .centered-div {
-        width: 335px;
-        height: 25.5%;
-        top: 12.5%;
-        left: 22%;
-        transform: translateX(0);
-        padding: 10px;
+        width: 335px; /* Adjusted width */
+        height: 25.5%; /* Adjusted height */
+        top: 12.5%; /* Adjusted top position */
+        left: 22%; /* Adjusted left position */
+        transform: translateX(0); /* No horizontal centering */
+        padding: 10px; /* Padding */
     }
-
-   
 }
 
 /* Large devices (landscape tablets, 769px to 1024px) */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .centered-div {
-        width: 390px;
-        height: 27%;
-        top: 12.5%;
-        left: 27%;
-        transform: translateX(0);
-        padding: 10px;
+        width: 390px; /* Adjusted width */
+        height: 27%; /* Adjusted height */
+        top: 12.5%; /* Adjusted top position */
+        left: 27%; /* Adjusted left position */
+        transform: translateX(0); /* No horizontal centering */
+        padding: 10px; /* Padding */
     }
-
-   
 }
-
 
 @media only screen and (min-width: 1025px) and (max-width: 1260px) {
     .centered-div {
-        width: 465px;
-        height: 29.5vh;      
-        top: 12.5%;
-        left: 48.7%;
-        transform: translateX(-50%);
+        width: 465px; /* Adjusted width */
+        height: 29.5vh; /* Adjusted height */
+        top: 12.5%; /* Adjusted top position */
+        left: 48.7%; /* Adjusted left position */
+        transform: translateX(-50%); /* Center horizontally */
     }
 }
 
 @media only screen and (min-width: 1261px) and (max-width: 1470px) {
     .centered-div {
-        width: 487px;
-        height: 30vh;      
-        top: 12.5%;
-        left: 48.8%;
-        transform: translateX(-50%);
+        width: 487px; /* Adjusted width */
+        height: 30vh; /* Adjusted height */
+        top: 12.5%; /* Adjusted top position */
+        left: 48.8%; /* Adjusted left position */
+        transform: translateX(-50%); /* Center horizontally */
     }
 }
 
-
 @media only screen and (min-width: 1471px) and (max-width: 2400px) {
     .centered-div {
-        width: 572px;
-        height: 35.3vh;      
-        top: 5.2%;
-        left: 48.8%;
-        transform: translateX(-50%);
+        width: 572px; /* Adjusted width */
+        height: 35.3vh; /* Adjusted height */
+        top: 5.2%; /* Adjusted top position */
+        left: 48.8%; /* Adjusted left position */
+        transform: translateX(-50%); /* Center horizontally */
     }
 }
