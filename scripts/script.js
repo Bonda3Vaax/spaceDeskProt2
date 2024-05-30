@@ -1,3 +1,8 @@
+/**
+ * This script provides functionality to fetch a fortune from the Fortune Cookie API and display it on a webpage.
+ * It also includes event listeners for showing and hiding content based on user interactions.
+ */
+
 $(document).ready(function() {
     // Initially hide the 'myDiv' element
     $('#myDiv').hide();
@@ -7,13 +12,15 @@ $(document).ready(function() {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '8c6d76b497mshdf5aee64139bc3cp1f01cfjsn9e4046c458c5',
+            'X-RapidAPI-Key': '8c6d76b497mshdf5aee64139bc3cp1f01cfjsn9e4046c458c5', // API key for accessing the Fortune Cookie API
             // 'X-RapidAPI-Key': process.env.RAPIDAPI_KEY, // Accessing the API key from environment variables
-            'X-RapidAPI-Host': 'fortune-cookie4.p.rapidapi.com'
+            'X-RapidAPI-Host': 'fortune-cookie4.p.rapidapi.com' // API host
         }
     };
 
-    // Define the async function to fetch fortune
+    /**
+     * Fetches a fortune from the Fortune Cookie API and displays it on the webpage.
+     */
     async function fetchFortune() {
         try {
             // Fetch data from the API
@@ -55,16 +62,21 @@ $(document).ready(function() {
     // Ensure the planet content is initially hidden
     $('#planetContent').hide();
 
+    // Attach an event listener to toggle the display of planet content
     $('#searchButton2').on('click', function() {
         // Toggle the display property of the planet content
         $('#planetContent').toggle();
     });
 });
 
-// Function to navigate to a new page
+/**
+ * Navigates to a new page.
+ * @param {string} url - The URL of the page to navigate to.
+ */
 function openPage(url) {
     window.location.href = url;
 }
+
 
 
 // // code before jQuery

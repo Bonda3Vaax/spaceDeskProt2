@@ -1,4 +1,11 @@
-// Function to navigate to a new page
+/**
+ * This script handles navigation to a new page, form submission, and toggling the display of a contact form.
+ */
+
+/**
+ * Navigates to a new page.
+ * @param {string} url - The URL of the page to navigate to.
+ */
 function openPage(url) {
     window.location.href = url; // Change the current URL to the provided one
 }
@@ -8,10 +15,10 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     event.preventDefault(); // Prevent default form submission behavior
 
     // Get form field values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
+    const name = document.getElementById('name').value; // Get the value of the name field
+    const email = document.getElementById('email').value; // Get the value of the email field
+    const subject = document.getElementById('subject').value; // Get the value of the subject field
+    const message = document.getElementById('message').value; // Get the value of the message field
 
     // Check if all fields are filled
     if (name && email && subject && message) {
@@ -33,4 +40,3 @@ document.getElementById('searchButton5').addEventListener('click', function() {
         formContainer.style.display = 'none'; // Hide the form container
     }
 });
-
